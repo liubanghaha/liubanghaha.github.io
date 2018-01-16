@@ -14,19 +14,26 @@
 <meta name="author" content="liubanghaha" />
 
 
-    
-    
 
+<meta name="description" content="Java8Lambda 表达式的基础语法：Java8中引入了一个新的操作符 “-&amp;gt;” 该操作符称为箭头操作符或 Lambda 操作符箭头操作符将 Lambda 表达式拆分成两部分：﻿​
+左侧：Lambda 表达式的参数列表右侧：Lambda 表达式中所需执行的功能， 即 Lambda 体
 
-<meta name="description" content="交流学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一万小时定律">
-<meta property="og:url" content="http://code.liubanghaha.com/index.html">
+语法格式一：无参数，无返回值() -&amp;gt; System.out.println(“Hello La">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java核心知识">
+<meta property="og:url" content="http://code.liubanghaha.com/2018/01/16/new/index.html">
 <meta property="og:site_name" content="一万小时定律">
-<meta property="og:description" content="交流学习">
+<meta property="og:description" content="Java8Lambda 表达式的基础语法：Java8中引入了一个新的操作符 “-&amp;gt;” 该操作符称为箭头操作符或 Lambda 操作符箭头操作符将 Lambda 表达式拆分成两部分：﻿​
+左侧：Lambda 表达式的参数列表右侧：Lambda 表达式中所需执行的功能， 即 Lambda 体
+
+语法格式一：无参数，无返回值() -&amp;gt; System.out.println(“Hello La">
+<meta property="og:updated_time" content="2018-01-16T10:39:23.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一万小时定律">
-<meta name="twitter:description" content="交流学习">
+<meta name="twitter:title" content="java核心知识">
+<meta name="twitter:description" content="Java8Lambda 表达式的基础语法：Java8中引入了一个新的操作符 “-&amp;gt;” 该操作符称为箭头操作符或 Lambda 操作符箭头操作符将 Lambda 表达式拆分成两部分：﻿​
+左侧：Lambda 表达式的参数列表右侧：Lambda 表达式中所需执行的功能， 即 Lambda 体
+
+语法格式一：无参数，无返回值() -&amp;gt; System.out.println(“Hello La">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,13 +61,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>一万小时定律</title>
+<title>java核心知识 | 一万小时定律</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -69,8 +74,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -264,75 +269,7 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/01/16/linux/" class="article-date">
-      <time datetime="2018-01-16T09:34:31.000Z" itemprop="datePublished">2018-01-16</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/16/linux/">linux</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h2><p>1、:0,:1,gg都可以到第一行<br>2、shift+g到末行<br>3、或者:$=检查总行数比如24，:24到第24行</p>
-<ol>
-<li>让VIM显示行号的方法<br>–   set nu 显示行号   取消显示   set nonu<br>5.在vi中按u可以撤销一次操作<br>6.Ctrl+r 恢复上一步被撤销的操作
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2018/01/16/linux/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/01/16/new/" class="article-date">
@@ -350,12 +287,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/16/new/">java核心知识</a>
+    <h1 class="article-title" itemprop="name">
+      java核心知识
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -421,23 +369,85 @@ Java Heap 是 Java 虚拟机所管理的内存中最大的一块，它是所有�
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2018/01/16/new/">java核心知识</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">liubanghaha</a></p>
+        <p><span>Created:</span>2018-01-16, 17:34:31</p>
+        <p><span>Updated:</span>2018-01-16, 18:39:23</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2018/01/16/new/" title="java核心知识">http://code.liubanghaha.com/2018/01/16/new/</a>
+            <span class="copy-path" data-clipboard-text="From http://code.liubanghaha.com/2018/01/16/new/　　By liubanghaha" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/16/linux/">
+                    linux
+                </a>
+            </div>
+        
+        
+    </nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java8"><span class="toc-number">1.</span> <span class="toc-text">Java8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java并发"><span class="toc-number">2.</span> <span class="toc-text">Java并发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java虚拟机"><span class="toc-number">3.</span> <span class="toc-text">Java虚拟机</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"java核心知识　| 一万小时定律　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -445,9 +455,33 @@ Java Heap 是 Java 虚拟机所管理的内存中最大的一块，它是所有�
 
 
 
+    
 
-  
-  
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/01/16/linux/" title="Pre: linux">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/linux/">linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/new/">java核心知识</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

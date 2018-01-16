@@ -25,7 +25,7 @@
 <meta property="og:description" content="Vim编辑器1、:0,:1,gg都可以到第一行2、shift+g到末行3、或者:$=检查总行数比如24，:24到第24行
 
 让VIM显示行号的方法–   set nu 显示行号   取消显示   set nonu5.在vi中按u可以撤销一次操作6.Ctrl+r 恢复上一步被撤销的操作">
-<meta property="og:updated_time" content="2018-01-16T10:11:15.600Z">
+<meta property="og:updated_time" content="2018-01-16T10:59:20.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux">
 <meta name="twitter:description" content="Vim编辑器1、:0,:1,gg都可以到第一行2、shift+g到末行3、或者:$=检查总行数比如24，:24到第24行
@@ -316,7 +316,21 @@
 <p>service iptables status<br>service iptables stop<br>service iptables start</p>
 <h2 id="查看安装路径"><a href="#查看安装路径" class="headerlink" title="查看安装路径"></a>查看安装路径</h2><p>rpm -ql<br>rpm -qa | grep  是否安装</p>
 <p>Linux  查看进程<br>ps -aux | grep</p>
-<p>Xshell  —–&gt;   rz</p>
+<h2 id="Xshell"><a href="#Xshell" class="headerlink" title="Xshell"></a>Xshell</h2><p>安装 yum install lrzsz<br> —–&gt;   rz  上传文件</p>
+<p>##Redis##<br>Redis 启动<br>./redis-server   redis.conf<br>redis-cli -p 6379<br>关闭 shutdown  退出 exit</p>
+<p>##mysql  Linux 常用命令##</p>
+<p>1.Linux查看mysql 安装目录   ps -ef | grep mysql</p>
+<ol>
+<li>查看MySQL是否安装及其版本  rpm -qa|grep mysql<br>3.查看MySQL 开机自启 chkconfig –list mysql  开启  chkconfig mysql on<br>4 数据库目录/var/lib/mysql/    配置文件/usr/share /mysql（mysql.server命令及配置文件）</li>
+</ol>
+<p>5.linux下使用yum安装mysql<br>来自 <a href="http://jingyan.baidu.com/article/922554465e471a851648f4ed.html" target="_blank" rel="external">http://jingyan.baidu.com/article/922554465e471a851648f4ed.html</a><br>1、安装<br>查看有没有安装过：<br>          yum list installed mysql<em><br>          rpm -qa | grep mysql</em></p>
+<p>查看有没有安装包：<br>          yum list mysql*</p>
+<p>安装mysql客户端：<br>          yum install mysql</p>
+<p>安装mysql 服务器端：<br>          yum install mysql-server<br>          yum install mysql-devel</p>
+<p>2、启动&amp;&amp;停止</p>
+<p>数据库字符集设置<br>          mysql配置文件/etc/my.cnf中加入default-character-set=utf8</p>
+<p>启动mysql服务：<br>          service mysqld start或者/etc/init.d/mysqld start<br>开机启动：<br>          chkconfig –add mysqld，查看开机启动设置是否成功chkconfig –list | grep mysql*<br>          mysqld             0:关闭    1:关闭    2:启用    3:启用    4:启用    5:启用    6:关闭<br>停止：<br>          service mysqld stop<br>2、登录<br> 这是需要启动mysqld    service mysqld start<br>创建root管理员：<br>          mysqladmin -u root password 123456<br>登录：<br>          mysql -u root -p输入密码即可。<br>忘记密码：<br>          service mysqld stop<br>          mysqld_safe –user=root –skip-grant-tables<br>          mysql -u root<br>          use mysql<br>          update user set password=password(“new_pass”) where user=”root”;<br>          flush privileges;  </p>
+<p>3、远程访问<br>开放防火墙的端口号<br>mysql增加权限：mysql库中的user表新增一条记录host为“%”，user为“root</p>
 
       
     </div>
@@ -328,7 +342,7 @@
         <p><span>本文标题:</span><a href="/2018/01/16/linux/">linux</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">liubanghaha</a></p>
         <p><span>发布时间:</span>2018-01-16, 17:34:31</p>
-        <p><span>最后更新:</span>2018-01-16, 18:11:15</p>
+        <p><span>最后更新:</span>2018-01-16, 18:59:20</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/16/linux/" title="linux">http://code.liubanghaha.com/2018/01/16/linux/</a>
             <span class="copy-path" data-clipboard-text="原文: http://code.liubanghaha.com/2018/01/16/linux/　　作者: liubanghaha" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -343,12 +357,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/01/16/new/">
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/16/java/">
                     java核心知识
                 </a>
             </div>
+        
         
     </nav>
 
@@ -358,7 +372,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim编辑器"><span class="toc-number">1.</span> <span class="toc-text">Vim编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防火墙（centos7-以下）"><span class="toc-number">2.</span> <span class="toc-text">防火墙（centos7 以下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看安装路径"><span class="toc-number">3.</span> <span class="toc-text">查看安装路径</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim编辑器"><span class="toc-number">1.</span> <span class="toc-text">Vim编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防火墙（centos7-以下）"><span class="toc-number">2.</span> <span class="toc-text">防火墙（centos7 以下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看安装路径"><span class="toc-number">3.</span> <span class="toc-text">查看安装路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Xshell"><span class="toc-number">4.</span> <span class="toc-text">Xshell</span></a></li></ol>
         
     </div>
     <style>
@@ -414,19 +428,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/01/16/java/" title="上一篇: java核心知识">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/01/16/new/" title="下一篇: java核心知识">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/linux/">linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/new/">java核心知识</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/springboot/">SpringBoot</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/code/">源码学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/java/">java核心知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/linux/">linux</a></li></ul>
 
 
 
